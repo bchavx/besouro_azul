@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a{
+text-decoration: none;
+color: inherit;
+}
+
 body{
     height: 100vh;
     background-image: url(./img/fundo.img.desktop.png);
@@ -15,12 +20,23 @@ body{
     padding-left: 96px;
     padding-right: 96px;
     padding-bottom: 16px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header{
-    background-color: blue;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
 }
+
+header a{
+    color: #22FFFE;
+    font-size: 1.5rem;
+}
+
 main{
     background-color: brown;
     flex-grow: 1;
