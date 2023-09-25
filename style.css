@@ -8,15 +8,26 @@ a{
     color: inherit;
 }
 
+html{
+    overflow: hidden;
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c6469dfd243f369395086b706086c2d3e880cbf
 body{
+    position: relative;
     font-family: 'Inter', sans-serif;
     height: 100vh;
+    width: 100vw;
     background-image: url(./img/background-desktop.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     padding: 32px 96px 16px 96px;
+    z-index: -100;
+    overflow: hidden;
 }
 
 header{
@@ -35,7 +46,15 @@ header a{
 
 header i.fas{
     display: none;
+    color: #D040FF;
+<<<<<<< HEAD
+    font-size: 32px;
 }
+=======
+    font-size: 35px;
+}
+
+>>>>>>> 9c6469dfd243f369395086b706086c2d3e880cbf
 header a:hover{
 border-bottom: 4px solid #22FFFE;
 }
@@ -43,7 +62,17 @@ border-bottom: 4px solid #22FFFE;
 header .logo-dc:hover{
     border-bottom: 4px solid transparent;
 }
+<<<<<<< HEAD
 
+header .overlay{
+    display: none;
+}
+
+=======
+header .overlay{
+    display: none;
+}
+>>>>>>> 9c6469dfd243f369395086b706086c2d3e880cbf
 main{
     flex-grow: 1;
     display: flex;
@@ -66,7 +95,13 @@ main{
 
 .descricao button{
     display: none;
+<<<<<<< HEAD
 }
+=======
+
+}
+
+>>>>>>> 9c6469dfd243f369395086b706086c2d3e880cbf
 .descricao p{
     width: 520px;
     font-size: 1.5rem;
@@ -106,6 +141,7 @@ footer{
 
 
 /* tablet  */
+
 @media (max-width:768px){
 
 body{
@@ -131,6 +167,7 @@ body{
 .filme-container{
     align-items:center;
 }
+
 .descricao{
     justify-content: flex-start;
     padding: 60px;
@@ -147,6 +184,7 @@ footer{
 
 }
 
+<<<<<<< HEAD
 /* MOBILE  */
 
 @media(max-width: 480px){
@@ -164,11 +202,48 @@ footer{
     header a:not(.logo-dc){
         display: none;
     }
-    header i.fas{
+    header i.fa-bars{
         display: block;
-        color: #D040FF;
-        font-size: 32px;
     }
+
+    header.menu i.fa-bars{
+        display: none;
+    }
+    header.menu i.fa-bars + .fa-times{
+        display: block;
+    }
+
+    header .overlay{
+        display: block;
+        position: absolute;
+        background: linear-gradient(135deg, rgba(125,2,166,1) 0%, rgba(34,255,254,1) 100%);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        transform: translatex(100%);
+        transition: 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        }
+
+    header .overlay a{
+        display: block;
+        font-size: 2rem;
+        color: #FFE;
+    }
+
+    header.menu i.fa-bars ~ .overlay{
+        transform: translateX(0%);
+    }
+
+    main{
+        z-index: -2;
+    }
+/*  */
     .descricao{
         align-items: center;
         gap: 32px;
@@ -201,3 +276,104 @@ footer{
     }
 
 }
+=======
+/* mobile */
+
+@media(max-width:480px){
+body{
+    background-image: url(./img/background-mobile.png);
+}
+header{
+    justify-content: space-between;
+    padding: 0px 24px 0 24px;
+    align-items: center;
+}
+
+header a{
+    border-bottom: none;
+    height: 48px;
+}
+
+header a:not(.logo-dc){
+    display: none;
+    
+}
+
+header i.fa-bars{
+    display: block;
+}
+
+header.menu i.fa-bars{
+    display: none;
+}
+
+header.menu i.fa-bars + .fa-times{
+    display: block;
+}
+
+header .overlay{
+    display: block;
+    position: absolute;
+    background: linear-gradient(135deg, rgba(125,2,166,1) 0%, rgba(34,255,254,1) 100%);
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header .overlay a{
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+}
+
+header.menu i.fa-bars ~ .overlay{
+    transform: translatex(0%);
+}
+
+main{
+    z-index: -2;
+}
+
+.descricao{
+    padding: 0;
+    justify-content: end;
+    align-items: center;
+    gap:32px;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+.descricao a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    background-color: #D040FF;
+    border: 2px solid #22FFFE;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 50px;
+
+}
+.descricao img{
+    width: 95vw;
+}
+.descricao p{
+    display: none;
+}
+
+.trailers{
+    display: none;
+}
+
+}
+>>>>>>> 9c6469dfd243f369395086b706086c2d3e880cbf
